@@ -1,0 +1,127 @@
+{% extends "base.html" %}
+
+{% block body %}
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+        <!--/* contact SECTION */-->
+        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+        <div class="portfolioIntro text-center">
+                <div class="black-overlay"></div>
+                <br><br>
+                <h2 class="dark" data-scroll-reveal="enter top move 10px over 1s after 0.2s">
+                    <span>Contáctenos</span>
+                </h2>
+        </div>
+        <section id="contact" >
+            <div class="container pt-0">
+                <!--header-->
+
+                <div class="row sectionIntro">
+                    <div class="col-md-8 col-md-offset-2 text-center">
+                        <p data-scroll-reveal="enter bottom move 10px over 1s after 0.2s">
+                            En <strong>López | Durling</strong> queremos mantener un contacto directo y eficiente con nuestros clientes. Ponemos a su disposición nuestros datos de contacto. o si lo prefiere puede enviarnos un mesnsaje a través del siguiente formulario.
+                        </p>
+
+                        <img src="./img/separatorBlack.png" class="img-responsive center-block separator" alt="separator">
+
+                    </div>
+                </div>
+                <!--end header-->
+
+                <!--content-->
+                <div class="row">
+
+
+                    <div class="col-md-6 col-sm-6 col-xs-12" data-scroll-reveal="enter left move over 1s after 0.2s">
+
+                        <p class="bold">IINFORMACIÓN DE CONTACTO</p>
+                        <p>
+                            Llámenos, visítenos o comuniquese con nostros por cualquiera de los siguientes medios. Le atenderemos con la mayor brevedad posible.
+                        </p>
+
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6 col-xs-6 listwrapper">
+                                <ul class="infoContact">
+                                    <li><i class="fa fa-location-arrow"></i> Calle 52 y Elvira Méndez,</li>
+                                    <li>Edificio Vallarino (Piso 15),</li>
+                                    <li>Ciudad de Panamá,</li>
+                                    <li>República de Panamá.</li>
+                                </ul>
+                            </div>
+
+                            <div class="col-md-6 col-sm-6 col-xs-6 listwrapper">
+                                <ul class="infoContact">
+                                    <li><i class="fa fa-phone"></i>TFL: +(507) 263-8244</li>
+                                    <li>FAX: +(507) 263-8234</li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6 col-xs-6 listwrapper">
+                                <ul class="infoContact">
+                                    <li><i class="fa fa-envelope-o"></i> adm@durlinglaw.com</li>
+                                    <li>Skype: durlinglaw</li>
+                                </ul>
+                            </div>
+
+                            <div class="col-md-6 col-sm-6 col-xs-6 listwrapper">
+                                <ul class="infoContact">
+                                    <li><i class="fa fa-clock-o"></i> Lunes- Viernes: 8 AM - 5 PM</li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                        <ul class="socialContact">
+                            <li><a class="fa fa-facebook" href="#"></a></li>
+                            <li><a class="fa fa-twitter" href="#"></a></li>
+                            <li><a class="fa fa-google-plus" href="#"></a></li>
+                        </ul>
+
+                    </div>
+
+                    <div class="col-md-6 col-sm-6 col-xs-12 text-center" data-scroll-reveal="enter right move over 1s after 0.2s">
+                        <div id="result"></div>
+                        <form method="post" action="./contact.php" name="contactform" id="contactform">
+
+                            <fieldset id="contact_form">
+                                <label for="name">
+                                    <input type="text" name="name" id="name" placeholder="Nombre completo">
+                                </label>
+
+                                <label for="email">
+                                    <input type="email" name="email" id="email" placeholder="Dirección de Email">
+                                </label>
+
+                                <label for="phone">
+                                    <input type="text" name="phone" id="phone" placeholder="Teléfono">
+                                </label>
+
+                                <label for="comments">
+                                    <textarea name="comments" id="comments" placeholder="Su Mensaje"></textarea>
+                                </label>
+
+                                <input type="submit" class="submit btn btn-default btn-black" id="submit" value="Enviar Consulta">
+                            </fieldset>
+
+                        </form>
+                    </div>
+
+
+                </div>
+                <!--end content-->
+            </div>
+        </section>
+        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+        <!--/* END contact SECTION */-->
+        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+        <!--/* googleMap SECTION */-->
+        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+        <section id="googleMap"></section>
+        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+        <!--/* googleMap SECTION */-->
+        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+{% endblock %}
