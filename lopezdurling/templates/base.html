@@ -222,8 +222,10 @@
 
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
         <script type="text/javascript" src="{% static 'js/scripts.js' %}"></script>
-		<script src="{% static 'js/preloader.js' %}"></script>
+        <script src="{% static 'js/preloader.js' %}"></script>
         <script src="{% static 'js/custom.js' %}"></script>
+        <script src="https://maps.googleapis.com/maps/api/js"></script>
+        <script src="{% static '/js/googleMapInit.js' %}"></script>
 
         <script>
             // featured gallery overlay
@@ -285,7 +287,9 @@
         </script>
 
         <script>
-            $.backstretch("{% static 'img/background1.jpg' %}");
+            if(location.pathname=="/" || location.pathname=="/index.html"){
+              $.backstretch("{% static 'img/background1.jpg' %}");
+            }
         </script>
 
   </body>
