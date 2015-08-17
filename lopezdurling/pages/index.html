@@ -1,3 +1,4 @@
+type_header: 50
 {% extends "base.html" %}
 
 {% block body %}
@@ -74,7 +75,7 @@
                         Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.
                     </p>
                     <br>
-                    <a data-scroll href="pages/about.html" class="btn btn-default btn-black">Conozca más de la Firma</a>
+                    <a data-scroll href="{% url '/firma.html' %}" class="btn btn-default btn-black">Conozca más de la Firma</a>
                 </div>
             </div>
         </section>
@@ -160,7 +161,7 @@
                 <div class="row">
                     <div class="col-md-12 text-center">
                         <br><br>
-                        <a class="btn btn-default btn-black center-block" href="pages/team.html">Ver equipo de trabajo</a>
+                        <a class="btn btn-default btn-black center-block" href="{% url '/firma.html' %}">Ver equipo de trabajo</a>
                     </div>
                 </div>
                 <!--end content-->
@@ -271,7 +272,7 @@
                                             <div class="caption-heading">
                                                 <h5>Derecho Corporativo</h5>
                                                 <p>Ladyship it daughter securing procured or am moreover mr. Put sir she exercise vicinity cheerful wondered. </p>
-                                                <a class="btn btn-default btn-black overlay-ajax" id="trigger-overlay"  href="single-project.html"  data-toggle="modal">Conozca más</a>
+                                                <a class="btn btn-default btn-black "  href="#">Conozca más</a>
                                             </div>
                                 <!-- end caption -->
 
@@ -290,7 +291,7 @@
                                 <div class="caption-heading">
                                     <h5>Derecho Bancario</h5>
                                     <p>Ladyship it daughter securing procured or am moreover mr. Put sir she exercise vicinity cheerful wondered. </p>
-                                    <a class="btn btn-default btn-black overlay-ajax" id="trigger-overlay-two"  href="single-project.html"  data-toggle="modal">Conozca más</a>
+                                    <a class="btn btn-default btn-black "  href="#">Conozca más</a>
                                 </div>
                                 <!-- end caption -->
 
@@ -309,7 +310,7 @@
                                 <div class="caption-heading">
                                     <h5>Propiedad Intelectual</h5>
                                     <p>Ladyship it daughter securing procured or am moreover mr. Put sir she exercise vicinity cheerful wondered. </p>
-                                    <a class="btn btn-default btn-black overlay-ajax" id="trigger-overlay-three"  href="single-project-2.html"  data-toggle="modal">Conozca más</a>
+                                    <a class="btn btn-default btn-black "  href="#">Conozca más</a>
                                 </div>
                                 <!-- end caption -->
 
@@ -328,7 +329,7 @@
                                 <div class="caption-heading">
                                     <h5>Derecho Migratorio</h5>
                                     <p>Ladyship it daughter securing procured or am moreover mr. Put sir she exercise vicinity cheerful wondered. </p>
-                                    <a class="btn btn-default btn-black overlay-ajax" id="trigger-overlay-four"  href="single-project.html"  data-toggle="modal">Conozca más</a>
+                                    <a class="btn btn-default btn-black "  href="#">Conozca más</a>
                                 </div>
                                 <!-- end caption -->
 
@@ -342,7 +343,7 @@
                 <div class="row">
                     <div class="col-md-12 text-center">
                         <br><br>
-                        <a class="btn btn-default btn-black center-block" href="pages/team.html">Ver Nuestros Servicios</a>
+                        <a class="btn btn-default btn-black center-block" href="{% url '/servicios.html' %}">Ver Nuestros Servicios</a>
                     </div>
                 </div>
 
