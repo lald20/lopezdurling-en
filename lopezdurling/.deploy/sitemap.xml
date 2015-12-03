@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?> 
 <urlset xmlns="http://www.google.com/schemas/sitemap/0.84">
     <url>
-        <loc>http://lopezdurling.com/contacto/</loc>
-        <changefreq>daily</changefreq>
-        <priority>1.0</priority>
-    </url>
-    <url>
-        <loc>http://lopezdurling.com/servicios/</loc>
-        <changefreq>daily</changefreq>
-        <priority>1.0</priority>
-    </url>
-    <url>
-        <loc>http://lopezdurling.com/firma/</loc>
+        <loc>http://lopezdurling.com/servicios/servicio/</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
