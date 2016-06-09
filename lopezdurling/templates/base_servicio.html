@@ -1,0 +1,70 @@
+
+{% extends "base.html" %}
+
+{% block body %}
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--/* about SECTION */-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<section id="about">
+    <div class="portfolioIntro text-center">
+        <div class="black-overlay"></div>
+        <br><br>
+        <h2 class="dark" data-scroll-reveal="enter top move 10px over 1s after 0.2s">
+            <span><i class="fa fa-{{ icon }}"></i> {{ title }}</span>
+        </h2>
+    </div>
+    <div class="container pt-60">
+
+        <h1 class="parallaxLetter letter1" data-stellar-ratio="1.5" data-stellar-vertical-offset="0">D</h1>
+        <h1 class="parallaxLetter letter2" data-stellar-ratio="0.5" data-stellar-vertical-offset="200">L</h1>
+
+        <div class="row">
+            <div class="col-md-9 service-content">
+                <h4>{{ title }}</h4>
+                <img src="{% static '/img/lineSeparatorBlack.png' %}" class="img-responsive lineSeparator" alt="separator">
+                {% block service_content %}
+                {% endblock %}
+                {% if img %}
+                <br>
+                <!--<img src="{{ img }}" class="img-responsive mb-40 service-img" alt="{{ title }} - Servicios Abogados Panama - López | Durling">-->
+                {% endif %}
+            </div>
+            <div class="col-md-3 sidebar">
+                <h5>Áreas de Práctica</h5><br>
+                <ul class="sidebar-list">
+                    <li><a class="{% if_current_page '/servicios/contratos.html' 'active' %}" href="{% url '/servicios/contratos.html' %}">Contratos</a></li>
+                    <li><a class="{% if_current_page '/servicios/derecho_corporativo.html' 'active' %}" href="{% url '/servicios/derecho_corporativo.html' %}">Derecho Corporativo</a></li>
+                    <li><a class="{% if_current_page '/servicios/derecho_maritimo.html' 'active' %}" href="{% url '/servicios/derecho_maritimo.html' %}">Derecho Marítimo</a></li>
+                    <li><a class="{% if_current_page '/servicios/bienes_raices.html' 'active' %}" href="{% url '/servicios/bienes_raices.html' %}">Bienes Raíces</a></li>
+                    <li><a class="{% if_current_page '/servicios/inversion_capitales.html' 'active' %}" href="{% url '/servicios/inversion_capitales.html' %}">Inversión de Capitales</a></li>
+                    <li><a class="{% if_current_page '/servicios/propiedad_intelectual.html' 'active' %}" href="{% url '/servicios/propiedad_intelectual.html' %}">Propiedad Intelectual</a></li>
+                    <li><a class="{% if_current_page '/servicios/derecho_comercial.html' 'active' %}" href="{% url '/servicios/derecho_comercial.html' %}">Derecho Comercial</a></li>
+                    <li><a class="{% if_current_page '/servicios/fundaciones.html' 'active' %}" href="{% url '/servicios/fundaciones.html' %}">Fundaciones de interés privado</a></li>
+                </ul>
+                <br>
+                <h5>Póngase en Contacto</h5>
+                <ul class="infoContact p-10">
+                    <li><i class="fa fa-phone"></i> TLF: +(507) 263-8244</li>
+                    <li>FAX: +(507) 263-8234</li>
+                </ul>
+                <hr>
+                <ul class="infoContact p-10">
+                    <li><i class="fa fa-location-arrow"></i> Calle 52 y Elvira Méndez</li>
+                    <li>Edificio Vallarino (Piso 15)</li>
+                    <li>Ciudad de Panamá, Panamá</li>
+                </ul>
+                <hr>
+                <ul class="infoContact p-10">
+                    <li><i class="fa fa-envelope-o"></i> adm@durlinglaw.com</li>
+                    <li>Skype: durlinglaw</li>
+                </ul>
+
+            </div>
+        </div>
+
+
+        <!--content-->
+    </div>
+</section>
+{% endblock %}
