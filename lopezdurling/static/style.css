@@ -986,12 +986,16 @@ p.bold{
 }
 
 .memberDescription h2{
-    letter-spacing:0;
+   margin-top: 25px;
+    letter-spacing: 0px;
+    text-align: center;
+    font-size: 24px;
 }
 
 .memberDescription .position{
     margin-top:10px;
     margin-bottom:40px;
+    text-align: center;
 }
 
 .memberDescription .position span {
@@ -1380,8 +1384,9 @@ label input, textarea{
     padding:10px 40px;;
 }
 
-.footerText p{
-    color: #a5a5a5
+.footerText p {
+    color: #a5a5a5;
+    font-size: 13px;
 }
 
 
@@ -2029,4 +2034,12 @@ img.circle {
     border-radius: 50%;
     width: 75%;
 }
-
+.navbar-default .navbar-nav>li>a {
+    color: #c1c1c1;
+}
+.footerText h4 {
+    font-size: 16px;
+}
+.mt-30 {
+    margin-top: 30px;
+}
