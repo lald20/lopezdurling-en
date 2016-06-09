@@ -207,21 +207,12 @@ type_header: 50
 
                     <div class="col-md-8 col-sm-12 col-xs-12">
                         <div id="owl-clients" class="owl-carousel">
+                            {% for client in CLIENT_LIST %}
                             <div class="clientLogo" data-scroll-reveal="enter right move 10px over 1s after 0.6s">
-                                <a href="#"><img src="{% static '/img/clients/1.png' %}" class="img-responsive center-block" alt="image"></a>
+                                <a href="{{ client.URL }}"><img src="{{ client.IMAGE }}" class="img-responsive center-block" alt="{{ client.NAME }} - Clientes de Lóepez Durling Abogados Panamá"></a>
                             </div>
-                            <div class="clientLogo" data-scroll-reveal="enter right move 10px over 1s after 0.4s">
-                                <a href="#"><img src="{% static '/img/clients/2.png' %}" class="img-responsive center-block" alt="image"></a>
-                            </div>
-                            <div class="clientLogo" data-scroll-reveal="enter right move 10px over 1s after 0.2s">
-                                <a href="#"><img src="{% static '/img/clients/3.png' %}" class="img-responsive center-block" alt="image"></a>
-                            </div>
-                            <div class="clientLogo">
-                                <a href="#"><img src="{% static '/img/clients/4.png' %}" class="img-responsive center-block" alt="image"></a>
-                            </div>
-                            <div class="clientLogo">
-                                <a href="#"><img src="{% static '/img/clients/5.png' %}" class="img-responsive center-block" alt="image"></a>
-                            </div>
+                            {% endfor %}
+
                         </div>
                     </div>
                     <img src="{% static 'img/textSeparatorLogo.png' %}" class="textSepLogo" data-stellar-ratio="0.5" alt="Logo Black">
