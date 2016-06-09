@@ -24,7 +24,7 @@ if (name == '' || !validateEmail(email)){
             "from_name": name,
             'to': [
               {
-                'email': 'gregesf@bluetideconsulting.com', //Destinatario del correo
+                'email': 'info@lopezdurling.com', //Destinatario del correo
                 'name': 'Contacto López Durling', //Nombre del Remitente
                 'type': 'to'
               }
