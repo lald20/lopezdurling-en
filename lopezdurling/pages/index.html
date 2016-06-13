@@ -213,25 +213,11 @@ type_header: 50
         <section id="text-separator-clients">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-md-4 col-sm-12 col-xs-12 clientsIntro text-center mb-20">
-
-                        <h3 data-scroll-reveal="enter left move 10px over 1s after 0.2s"><span>Clientes</span></h3>
-                        <p data-scroll-reveal="enter left move 10px over 1s after 0.3s" class="subtitleCustom">
-                            Estos son algunos de nuestros <strong>clientes</strong> representativos:
-                        </p>
+                    <div class="col-md-12 col-sm-12 col-xs-12 testimonial text-center mb-20">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+                        <br><span>John Doe - Socio López | Durling </span>
                     </div>
 
-
-                    <div class="col-md-8 col-sm-12 col-xs-12">
-                        <div id="owl-clients" class="owl-carousel">
-                            {% for client in CLIENT_LIST %}
-                            <div class="clientLogo" data-scroll-reveal="enter right move 10px over 1s after 0.6s">
-                                <a href="{{ client.URL }}"><img src="{{ client.IMAGE }}" class="img-responsive center-block" alt="{{ client.NAME }} - Clientes de Lóepez Durling Abogados Panamá"></a>
-                            </div>
-                            {% endfor %}
-
-                        </div>
-                    </div>
                     <img src="{% static 'img/textSeparatorLogo.png' %}" class="textSepLogo" data-stellar-ratio="0.5" alt="Logo Black">
                 </div>
             </div>
