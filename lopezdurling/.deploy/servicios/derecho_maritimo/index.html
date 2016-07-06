@@ -192,21 +192,31 @@
                             <h4 data-scroll-reveal="">Cosúltenos</h4>
                             <img src="/static/img/lineSeparatorWhite.png" class="img-responsive lineSeparator" data-scroll-reveal="enter left move 10px over 1s after 0.3s" alt="separator">
                             <div class="form-group" data-scroll-reveal="enter left move 10px over 1s after 0.3s">
-                                <div class="input-group">
-                                    <div class="input-group-addon"><i class="fa fa-user"></i></div>
-                                    <input class="form-control" type="email" placeholder="Nombre*">
-                                </div>
-                                <div class="input-group">
-                                    <div class="input-group-addon"><i class="fa fa-envelope-o"></i></div>
-                                    <input class="form-control" type="email" placeholder="Email*">
-                                </div>
-                                <div class="input-group">
-                                    <div class="input-group-addon"><i class="fa fa-align-justify"></i></div>
-                                    <textarea id="message" placeholder="Su Mensaje..."></textarea>
-                                </div>
-                                <div class="right mr-10">
-                                    <a href="#" class="btn btn-default btn-small">Enviar mensaje</a>
-                                </div>
+                                <form id="contactFooter">
+                                    <div class="input-group">
+                                        <div class="input-group-addon"><i class="fa fa-user"></i></div>
+                                        <input class="form-control" id="name_footer" type="text" placeholder="Nombre*">
+                                    </div>
+                                    <div class="input-group">
+                                        <div class="input-group-addon"><i class="fa fa-envelope-o"></i></div>
+                                        <input class="form-control" id="email_footer" type="email" placeholder="Email*">
+                                    </div>
+                                    <div class="input-group">
+                                        <div class="input-group-addon"><i class="fa fa-align-justify"></i></div>
+                                        <textarea id="comments_footer" placeholder="Su Mensaje..."></textarea>
+                                    </div>
+                                    <div id="notmail_footer" class="alert alert-success alert-dismissible" role="alert" style="display:none;">
+                                    <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                                    Su Mensaje ha sido enviado correctamente.
+                                    </div>
+                                    <div id="notmailerror_footer" class="alert alert-danger alert-dismissible" role="alert" style="display: none;">
+                                        <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                                        Tenemos un problema, por favor rellene los campos requeridos o inténtelo más tarde.
+                                    </div>
+                                    <div class="right mr-10">
+                                        <a href="javascript:void(0);" onclick="sendContactFooter();" class="btn btn-default btn-small" id="submit_footer">Enviar mensaje</a>
+                                    </div>
+                                </form>
                             </div>
                         </div>
 
@@ -227,21 +237,17 @@
 
                                 <div class="col-md-6">
                                     <ul class="infoContact">
-                                        <li><i class="fa fa-phone"></i> TLF: +(507) 263-8244</li>
-                                        <li>FAX: +(507) 263-8234</li>
+                                        <li><i class="fa fa-phone"></i> TLF: +(507) 6614 0384</li>
                                     </ul>
 
 
                                     <ul class="infoContact">
                                         <li><i class="fa fa-clock-o"></i> L-V: 8 AM - 3 PM</li>
-                                        <li>Sa: Cerrado</li>
-                                        <li>Do: Cerrado</li>
                                     </ul>
                                 </div>
                                 <div class="col-md-6">
                                     <ul class="infoContact">
-                                        <li><i class="fa fa-envelope-o"></i> adm@durlinglaw.com</li>
-                                        <li>Skype: durlinglaw</li>
+                                        <li><i class="fa fa-envelope-o"></i> info@lopezdurling.com</li>
                                     </ul>
 
                                 </div>
@@ -264,12 +270,10 @@
                 </div>
 
                 <ul class="footerSocialIcons">
-                    <li><a href="#"><i class="fa fa-facebook fa-2x"></i></a></li>
-                    <li><a href="#"><i class="fa fa-twitter fa-2x"></i></a></li>
-                    <li><a href="#"><i class="fa fa-instagram fa-2x"></i></a></li>
-                    <li><a href="#"><i class="fa fa-behance fa-2x"></i></a></li>
+                    <li><a class="fa fa-envelope" href="mailto:info@lopezdurling.com"></a></li>
+                    <li><a class="fa fa-phone" href="tel:50766140384"></a></li>
                 </ul>
-                <p>©2015 Derechos Reservados. López|Durling - Desarrollado por: BlueTide IT Consulting.</p>
+                <p>©2015 Derechos Reservados. López|Durling - Desarrollado por: <a target="_blank" href="http://bluetideconsulting.com">BlueTide IT Consulting.</a></p>
             </div>
         </section>
 
@@ -277,9 +281,7 @@
         <script type="text/javascript" src="/static/js/scripts.js"></script>
         <script src="/static/js/preloader.js"></script>
         <script src="/static/js/custom.js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js"></script>
-        <script src="/static/js/googleMapInit.js"></script>
-
+        <script src="/static/js/mandrill.js"></script>
         <script>
             // featured gallery overlay
             (function() {
@@ -344,9 +346,12 @@
               $.backstretch("/static/img/background1.jpg");
             }
         </script>
+        
+
+        
+        
 
   </body>
 
-  
   
 </html>
