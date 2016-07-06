@@ -2092,3 +2092,6 @@ input.required_field {
 #footer a {
     color: #d6d6d6;
 }
+a#submit_footer:hover {
+    color: #282828;
+}
