@@ -2089,3 +2089,6 @@ a.btn.btn-default.btn-black.btn-small {
 input.required_field {
     border-color: #ff7373!important;
 }
+#footer a {
+    color: #d6d6d6;
+}

@@ -18,6 +18,7 @@ function initialize() {
     var marker = new google.maps.Marker({
         position: new google.maps.LatLng(8.981396, -79.524764),
         map: map,
+        icon: "{% static '/images/icon/pin.png' %}",
         title: 'López | Durling'
     });
     var styles = [{"stylers":[{"hue":"#ff1a00"},{"invert_lightness":true},{"saturation":-100},{"lightness":33},{"gamma":0.5}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#2D333C"}]}]
