@@ -84,15 +84,15 @@ type_header: 50
 
                     <div class="col-md-6 col-sm-6 col-xs-12 text-center" data-scroll-reveal="enter right move over 1s after 0.2s">
                         <div id="result"></div>
-                        <form method="post" action="./contact.php" name="contactform" id="contactform">
+                        <form  id="contactForm">
 
                             <fieldset id="contact_form">
                                 <label for="name">
-                                    <input type="text" name="name" id="name" placeholder="Nombre completo">
+                                    <input type="text" name="name" id="name" placeholder="Nombre completo*">
                                 </label>
 
                                 <label for="email">
-                                    <input type="email" name="email" id="email" placeholder="Dirección de Email">
+                                    <input type="email" name="email" id="email" placeholder="Dirección de Email*">
                                 </label>
 
                                 <label for="phone">
@@ -102,8 +102,17 @@ type_header: 50
                                 <label for="comments">
                                     <textarea name="comments" id="comments" placeholder="Su Mensaje"></textarea>
                                 </label>
+                                
+                                <div id="notmail" class="alert alert-success alert-dismissible" role="alert" style="display:none;">
+                                    <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                                    Su Mensaje ha sido enviado correctamente.
+                                </div>
+                                <div id="notmailerror" class="alert alert-danger alert-dismissible" role="alert" style="display: none;">
+                                    <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                                    Tenemos un problema, por favor rellene los campos requeridos o inténtelo más tarde.
+                                </div>
 
-                                <input type="submit" class="submit btn btn-default btn-black" id="submit" value="Enviar Consulta">
+                                <a href="javascript:void(0);" onclick="sendContact();" class="submit btn btn-default btn-black" id="submit">Enviar Consulta</a>
                             </fieldset>
 
                         </form>
@@ -126,5 +135,10 @@ type_header: 50
         <!--/* googleMap SECTION */-->
         <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
+
+{% endblock %}
+{% block scripts %}
+<script src="https://maps.googleapis.com/maps/api/js"></script>
+<script src="{% static '/js/googleMapInit.js' %}"></script>
 
 {% endblock %}

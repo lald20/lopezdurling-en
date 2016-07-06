@@ -1400,7 +1400,6 @@ label input, textarea{
 .footerText input{
     height: 54px;
     padding-bottom: 3px;
-    border: 0;
     background: #393939;
     border-radius:0;
     line-height: 54px;
@@ -1410,7 +1409,13 @@ label input, textarea{
     color: white;
     letter-spacing:1px;
     margin-top: 10px;
+    border-color: #282828;
 
+}
+#contactFooter .form-control[disabled] {
+    cursor: not-allowed;
+    background-color: #585858;
+    opacity: 1;
 }
 .input-group-addon .fa {
     width: 10px;
@@ -2080,4 +2085,7 @@ a.btn.btn-default.btn-black.btn-small {
     font-size: 12px;
     font-style: normal;
     font-weight: 100;
+}
+input.required_field {
+    border-color: #ff7373!important;
 }
