@@ -257,6 +257,10 @@
 
 
 @media screen and (max-width: 480px){
+    .testimonial {
+        width: 80%;
+        margin: 0px 10% 40px;
+    }
 
     .gallery .grid-sizer-two-columns,
     .gallery .two-columns{
