@@ -149,19 +149,19 @@
                 <br>
                 <h5>Póngase en Contacto</h5>
                 <ul class="infoContact p-10">
-                    <li><i class="fa fa-phone"></i> TLF: +(507) 263-8244</li>
-                    <li>FAX: +(507) 263-8234</li>
+                    <li><i class="fa fa-phone"></i> TLF: +(507) 387-5546</li>
+                    <li>FAX: +(507) 387-5547</li>
                 </ul>
                 <hr>
                 <ul class="infoContact p-10">
-                    <li><i class="fa fa-location-arrow"></i> Calle 52 y Elvira Méndez</li>
-                    <li>Edificio Vallarino (Piso 15)</li>
+                    <li><i class="fa fa-location-arrow"></i> Calle Andrés Mojica,</li>
+                    <li>PH Gran Plaza, oficina G-1,</li>
+                    <li>San Francisco,</li>
                     <li>Ciudad de Panamá, Panamá</li>
                 </ul>
                 <hr>
                 <ul class="infoContact p-10">
-                    <li><i class="fa fa-envelope-o"></i> adm@durlinglaw.com</li>
-                    <li>Skype: durlinglaw</li>
+                    <li><i class="fa fa-envelope-o"></i> info@lopezdurling.com</li>
                 </ul>
 
             </div>
@@ -225,11 +225,19 @@
                             <h4 data-scroll-reveal="enter left move 10px over 1s after 0.2s">Contáctenos</h4>
                             <img src="/static/img/lineSeparatorWhite.png" class="img-responsive lineSeparator" data-scroll-reveal="enter left move 10px over 1s after 0.3s" alt="separator">
 
-                            <div class="row">
-
+                            <div class="row" itemscope itemtype="http://schema.org/Organization">
+                                <ul class="infoContact"  style="display:none;">
+                                    <li itemprop="name">López | Durling</li>
+                                </ul>
                                 <div class="col-md-12">
-                                    <ul class="infoContact">
-                                        <li><i class="fa fa-location-arrow"></i> Calle Andrés Mojica, PH Gran Plaza, oficina G-1, San Francisco. Ciudad de Panamá, República de Panamá</li>
+                                    <ul class="infoContact" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                                        <li><i class="fa fa-location-arrow"></i>
+                                            <span itemprop="streetAddress">Calle Andrés Mojica</span>,&nbsp;
+                                            <span itemprop="streetAddress">PH Gran Plaza, oficina G-1</span>, &nbsp;
+                                            <span itemprop="addressLocality">San Francisco</span>.&nbsp;
+                                            <span itemprop="addressRegion">Ciudad de Panamá</span>,&nbsp;
+                                            <span itemprop="addressCountry">República de Panamá</span>
+                                        </li>
                                     </ul>
 
                                 </div>
@@ -237,8 +245,8 @@
 
                                 <div class="col-md-6">
                                     <ul class="infoContact">
-                                        <li><i class="fa fa-phone"></i> TLF: +(507) 387-5546</li>
-                                        <li>TLF: +(507) 387-5547</li>
+                                        <li><i class="fa fa-phone"></i> TLF: <span itemprop="telephone">+(507) 387-5546</span></li>
+                                        <li>TLF: <span itemprop="telephone">+(507) 387-5547</span></li>
                                     </ul>
 
 
@@ -246,13 +254,13 @@
                                 </div>
                                 <div class="col-md-6">
                                     <ul class="infoContact">
-                                        <li><i class="fa fa-envelope-o"></i> info@lopezdurling.com</li>
+                                        <li itemprop="email"><i class="fa fa-envelope-o"></i> info@lopezdurling.com</li>
                                     </ul>
 
                                 </div>
                                 <div class="col-md-12">
                                     <ul class="infoContact">
-                                        <li><i class="fa fa-clock-o"></i> L-V: 8 AM a 12:30 PM y 2:00 PM a 5:00 PM</li>
+                                        <li ><i class="fa fa-clock-o"></i> L-V: 8 AM a 12:30 PM y 2:00 PM a 5:00 PM</li>
                                     </ul>
 
                                 </div>
@@ -268,7 +276,7 @@
             <div class="bottomLine text-center">
 
                 <div class="backToTop">
-                    <a data-scroll href="#intro">
+                    <a data-scroll href="#bigWrapper">
                         <i class="fa fa-angle-double-up"></i><br>
                         <h5>Volver Arriba</h5>
                     </a>
@@ -278,7 +286,9 @@
                     <li><a class="fa fa-envelope" href="mailto:info@lopezdurling.com"></a></li>
                     <li><a class="fa fa-phone" href="tel:5073875546"></a></li>
                 </ul>
-                <p>©2015 Derechos Reservados. López|Durling - Desarrollado por: <a target="_blank" href="http://bluetideconsulting.com">BlueTide IT Consulting.</a></p>
+                <div class="mt--30">
+                    <p>©<span id="year">2016</span> Derechos Reservados. López|Durling&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Desarrollado por:</p> <h1><a target="_blank" href="http://bluetideconsulting.com"><img class="btc-logo" src="/static/img/btc.png" alt="BlueTide IT Consulting"></a></h1>
+                </div>
             </div>
         </section>
 
@@ -351,11 +361,15 @@
               $.backstretch("/static/img/background1.jpg");
             }
         </script>
+        <script>
+            var date = new Date();
+            var year = date.getFullYear();
+            $("#year").text( year );
+        </script>
         
 
         
         
-
   </body>
 
   
