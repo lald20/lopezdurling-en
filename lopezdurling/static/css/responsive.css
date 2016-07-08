@@ -191,6 +191,11 @@
         background: rgba(0, 0, 0, 0.9);
         text-align: center;
     }
+    h2 {
+        font-size: 24px;
+        letter-spacing: 4px;
+
+    }
 
 }
 
@@ -202,9 +207,9 @@
     }
 
     h2 {
-        font-size: 24px;
+        font-size: 20px;
         text-transform: uppercase;
-        letter-spacing: 8px;
+        letter-spacing: 4px;
     }
 
     .introLogo {
@@ -292,7 +297,7 @@
     h2 {
         font-size: 16px;
         text-transform: uppercase;
-        letter-spacing: 4px;
+        letter-spacing: 2px;
     }
 
     h4 {
@@ -303,6 +308,7 @@
     .sectionIntro h2 span {
         padding: 12.5px 25px;
         border: solid 4px black;
+            display: block;
     }
 
     .portfolioIntro.text-center h2 {
