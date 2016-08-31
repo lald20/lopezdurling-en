@@ -1266,7 +1266,8 @@ label input, textarea{
 
 #contact_form #name,
 #contact_form #email,
-#contact_form #phone{
+#contact_form #phone,
+#paymentForm input {
     height: 50px;
     padding: 10px;
     padding-bottom: 0px;
@@ -1956,11 +1957,11 @@ div#owl-clients {
     z-index: 2;
 }
 .subtitleCustom{
-    margin-top: 40px; 
-    margin-left: 30px; 
+    margin-top: 40px;
+    margin-left: 30px;
 }
 .mb-20{
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
 }
 .footerText textarea {
         height: 100px;
@@ -2030,7 +2031,7 @@ ul.infoContact.p-10 li {
 }
 h2.dark span {
     border: solid 10px #FFFFFF;
-    
+
 }
 .pt-0{
     padding-top: 0px!important;

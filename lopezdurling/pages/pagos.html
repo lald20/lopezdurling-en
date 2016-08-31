@@ -1,0 +1,114 @@
+title: Pagos
+description: Pagar nuestros servicios a través de internet
+type_header: 50
+{% extends "base.html" %}
+
+{% block body %}
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+        <!--/* contact SECTION */-->
+        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+        <div class="portfolioIntro text-center">
+                <div class="black-overlay"></div>
+                <br><br>
+                <h2 class="dark" data-scroll-reveal="enter top move 10px over 1s after 0.2s">
+                    <span>{{ title }}</span>
+                </h2>
+        </div>
+        <section id="{{ title|lower }}" >
+            <div class="container pt-0">
+                <!--header-->
+
+                <div class="row sectionIntro">
+                    <div class="col-md-8 col-md-offset-2 text-center">
+                        <p data-scroll-reveal="enter bottom move 10px over 1s after 0.2s">
+                            Para realizar pagos a <strong>López | Durling</strong> por medio de internet, por favor llene el siguiente formulario. Los pagos son seguros, y al ser procesados serán confirmados por medio de correo electrónico.
+                        </p>
+
+                        <img src="{% static '/img/separatorBlack.png' %}" class="img-responsive center-block separator" alt="separator">
+
+                    </div>
+                </div>
+                <!--end header-->
+
+                <!--content-->
+                <div class="row">
+
+                  <form  id="paymentForm" method="post" action="">
+                    <div class="col-sm-6 col-xs-12 text-center" data-scroll-reveal="enter left move over 1s after 0.2s">
+                        <div id="result"></div>
+
+                        <label for="name">
+                            <input type="text" name="name" id="name" placeholder="Nombre completo*" required>
+                        </label>
+
+                        <label for="email">
+                            <input type="email" name="email" id="email" placeholder="Dirección de Email*" required>
+                        </label>
+
+                        <label for="address">
+                            <input type="text" name="address" id="address" placeholder="Dirección Física*" required>
+                        </label>
+
+                        <label for="city">
+                            <input type="text" name="city" id="city" placeholder="Ciudad" required>
+                        </label>
+
+                        <label for="country">
+                            <input type="text" name="country" id="country" placeholder="País" required>
+                        </label>
+                    </div>
+
+                    <div class="col-sm-6 col-xs-12 text-center" data-scroll-reveal="enter right move over 1s after 0.2s">
+
+                      <label for="amount">
+                          <input type="number" min="0" step="0.01" name="amount" id="amount" placeholder="Total a pagar (En números)" required>
+                      </label>
+
+                      <label for="ccn">
+                          <input type="text" name="ccn" id="ccn" placeholder="Número de tarjeta de Crédito" required>
+                      </label>
+
+                      <label for="expiration">
+                          <input type="text" name="expiration" id="expiration" placeholder="Fecha de expiración (MMAA)" required>
+                      </label>
+
+                      <label for="cvv2">
+                          <input type="text" name="cvv2" id="cvv2" placeholder="Número de Seguridad" required>
+                      </label>
+
+                      <label for="proforma">
+                          <input type="text" name="proforma" id="proforma" placeholder="Número de Proforma a Pagar" required>
+                      </label>
+
+                    </div>
+
+                    <div class="col-xs-8 col-xs-offset-2">
+
+                      <div id="payment_success" class="alert alert-success alert-dismissible" role="alert" style="display:none;">
+                          <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                          Su pago ha sido enviado con éxito.
+                          <span class="feedback"></span>
+                      </div>
+                      <div id="payment_failure" class="alert alert-danger alert-dismissible" role="alert" style="display: none;">
+                          <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                          Su pago no fue procesado correctamente. Por favor asegúrese que todos los campos estén llenos y que la información esté correcta.
+                          <span class="feedback"></span>
+                      </div>
+                      <a class="submit btn btn-default btn-black btn-block" id="submit">Pagar</a>
+                    </div>
+                </form>
+
+
+                </div>
+                <!--end content-->
+            </div>
+        </section>
+        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+        <!--/* END contact SECTION */-->
+        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+
+{% endblock %}
+{% block scripts %}
+
+{% endblock %}
