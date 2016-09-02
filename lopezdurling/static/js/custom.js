@@ -342,6 +342,12 @@ $(document).ready(function () {
       "country": $("#country").val()
     }
 
+    // Fast fail if it has no "proforma" value
+    if(!$("#proforma").val()){
+      message_listener($payment_failure_message)
+      return
+    }
+
     var backend_url = "https://kxi4h3cy99.execute-api.us-east-1.amazonaws.com/prod/lopezdurling"
       + "?proforma=" + $("#proforma").val()
 

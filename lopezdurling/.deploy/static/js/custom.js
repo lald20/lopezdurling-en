@@ -312,6 +312,60 @@ $(document).ready(function () {
 //
 //    $('.collapse').collapse();
 
+  /*
+  PAYMENT FORM LOGIC
+  */
+  var $payment_success_message = $("#payment_success")
+  var $payment_failure_message = $("#payment_failure")
+  var $payment_button = $("#paymentForm #submit")
+  $payment_button.click(function(e){
+
+    // Shows the corresponding alert message
+    var message_listener = function($alert_box, msg){
+      $payment_button.show()
+      $alert_box.show();
+    }
+
+    $payment_success_message.hide()
+    $payment_failure_message.hide()
+    $payment_button.hide()
+
+    var params = {
+      "ccn":$("#ccn").val(),
+      "cvv2":$("#cvv2").val(),
+      "expiration":$("#expiration").val(),
+      "amount":$("#amount").val(),
+      "name": $("#name").val(),
+      "address":$("#address").val(),
+      "email": $("#email").val(),
+      "city":$("#city").val(),
+      "country": $("#country").val()
+    }
+
+    var backend_url = "https://kxi4h3cy99.execute-api.us-east-1.amazonaws.com/prod/lopezdurling"
+      + "?proforma=" + $("#proforma").val()
+
+    $.ajax({
+      url: backend_url,
+      method: "post",
+      data: JSON.stringify(params),
+      crossDomain: true,
+      processData: false,
+      dataType: "json",
+      contentType:"application/json"
+    })
+      .done(function(msg){
+        // If the message has no ballot number, then it failed
+        if (msg.ballot && msg.response_code == "00"){
+          message_listener($payment_success_message, msg)
+        } else {
+          message_listener($payment_failure_message, msg)
+        }
+      })
+      .fail(function(msg){
+        message_listener($payment_failure_message, msg)
+      })
+  })
 
 
 });
