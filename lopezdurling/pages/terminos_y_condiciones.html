@@ -1,0 +1,50 @@
+title: Términos y Condiciones
+description: Pagar nuestros servicios a través de internet
+type_header: 50
+{% extends "base.html" %}
+
+{% block body %}
+        <div class="portfolioIntro text-center">
+                <div class="black-overlay"></div>
+                <br><br>
+                <h2 class="dark" data-scroll-reveal="enter top move 10px over 1s after 0.2s">
+                    <span>{{ title }}</span>
+                </h2>
+        </div>
+        <section id="{{ title|lower }}" >
+            <div class="container">
+
+                <div class="row sectionIntro">
+                  <div class="col-xs-12 text-center">
+                    <h1>Términos y Condiciones para Pagos Online</h1>
+                    <img src="{% static '/img/separatorBlack.png' %}" class="img-responsive center-block separator" alt="separator">
+                  </div>
+                </div>
+
+                <!--content-->
+                <div class="row">
+
+                  <div class="col-sm-8 col-sm-offset-2 col-xs-12">
+                    <p>El Cliente (“Cliente”) acuerda que utilizará el servicio de pago de factura online de LÓPEZ DURLING (“LD”) se regirá bajo los siguientes Términos y Condiciones (“TyC”):</p>
+                    <ol>
+                      <li><strong>Cargos Bancarios</strong>. El Cliente reconoce y acepta que el presente servicio de pago por tarjeta de crédito conlleva un costo adicional de tres por ciento (3%), calculado en base al monto total a pagar, por el cual el Cliente se hace responsable.</li>
+                      <li><strong>Contracargos</strong>. El Cliente asumirá cualquier costo que sea generado por contracargos o transacciones reversadas cuando la misma haya sido por causa imputable a éste (Cliente).</li>
+                      <li><strong>Aceptación de Cargos</strong>. Al realizar el pago mediante el uso de la presente plataforma, el Cliente tácitamente reconoce y acepta que ha leído con detenimiento y está de acuerdo con lo establecido en las proformas y/o facturas recibidas por parte de LD en concepto de gastos y honorarios por servicios legales prestados.</li>
+                      <li><strong>Veracidad de Información</strong>. El Cliente declara que la información suministrada en el formulario de pago suministrado por LD es cierta, completa y/o veraz. El Cliente será el único responsable de verificar que la información suministrada se encuentre libre de errores. El Cliente acepta y reconoce que el suministrar información falsa en perjuicio de LD o cualquier tercero es un delito sancionado por las leyes civiles y/o penales en la República de Panamá.</li>
+                      <li><strong>Entrega de Comprobante</strong>. Una vez realizado el pago, LD enviará en un periodo no mayor a veinticuatro (24) horas una confirmación al correo electrónico suministrado por  el Cliente en el formulario de pago informándole a éste si la transacción fue realizada con éxito o si hubo un error al procesar la misma.</li>
+                      <li><strong>Seguridad</strong>. Declara LD que el presente sistema informático para el pago de facturas es un servicio que por sus características de diseño e implementación no permite el almacenamiento de tarjetas de crédito, ni tampoco acceso a la información de tarjeta de crédito por políticas del banco proveedor del servicio. El Cliente será el único responsable en mantener segura su información, códigos de seguridad, entre otros, para salvaguardar la integridad de su información.</li>
+                      <li><strong>Reverso de Cargos</strong>. En caso que el Cliente requiera la reversión de algún cargo, el mismo reconoce y acepta el pago de US$25.00 en concepto de cargos bancarios a los cuales está sujeta dicha operación. El Cliente deberá notificar por escrito a billing@lopezdurling.com en un plazo no mayor a veinticuatro (24) horas contadas a partir del momento que se aprueba la transacción por el banco emisor de la tarjeta de crédito del Cliente.</li>
+                      <li><strong>Legislación Aplicable</strong>. Todos los TyC contenidos aquí, así como la relación entre Cliente y LD derivada del presente servicio se regirá bajo las leyes de la República de Panamá.</li>
+                      <li><strong>Modificaciones</strong>. LD se reserva el derecho exclusivo de modificar, de tiempo en tiempo, los TyC.</li>
+                    </ol>
+                    <p>Al hacer click en “Pagar”, el Cliente reconoce que ha leído los TyC aquí descritos y está de acuerdo con las políticas de uso de LD. En caso que el Cliente no esté de acuerdo con alguna sección, LD recomienda no utilizar el presente método de pago y contactar a LD al correo billing@lopezdurling.com para optar por otro método alterno.</p>
+                  </div>
+
+                </div>
+                <!--end content-->
+            </div>
+
+        </section>
+
+
+{% endblock %}

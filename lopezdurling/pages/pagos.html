@@ -33,11 +33,11 @@ type_header: 50
                 <!--content-->
                 <div class="row">
 
-                  <div class="col-xs-12 center">
-                    <p>Los campos marcados con asterisco (*) son obligatorios.</p>
-                  </div>
+                    <div class="col-xs-12 center">
+                      <p>Los campos marcados con asterisco (*) son obligatorios.</p>
+                    </div>
 
-                  <form  id="paymentForm" method="post" action="">
+                  <form id="paymentForm" method="post" action="">
                     <div class="col-sm-6 col-xs-12 text-center" data-scroll-reveal="enter left move over 1s after 0.2s">
                         <div id="result"></div>
 
@@ -86,6 +86,18 @@ type_header: 50
 
                     </div>
 
+                    <div class="col-xs-8 col-xs-offset-2 center">
+                      Aceptar Términos y Condiciones
+                      <label for="accept">
+                      <input type="checkbox" name="accept" value="false" id="checkbox_accept_tos"/>
+                      </label>
+
+                      <a href="{% url '/terminos_y_condiciones.html' %}">
+                        (Ver Términos y Condiciones)
+                      </a>
+
+                    </div>
+
                     <div class="col-xs-8 col-xs-offset-2">
 
                       <div id="payment_success" class="alert alert-success alert-dismissible" role="alert" style="display:none;">
@@ -98,6 +110,7 @@ type_header: 50
                           Su pago no fue procesado correctamente. Por favor asegúrese que todos los campos estén llenos y que la información esté correcta.
                           <span class="feedback"></span>
                       </div>
+                      <br />
                       <a class="submit btn btn-default btn-black btn-block" id="submit">Pagar</a>
                     </div>
                 </form>

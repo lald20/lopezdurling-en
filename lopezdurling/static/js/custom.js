@@ -342,6 +342,13 @@ $(document).ready(function () {
       "country": $("#country").val()
     }
 
+    // Must accept terms of service
+    if(!document.getElementById("checkbox_accept_tos").checked){
+      alert("Debe aceptar los Términos del Servicio")
+      message_listener($payment_failure_message)
+      return
+    }
+
     // Fast fail if it has no "proforma" value
     if(!$("#proforma").val()){
       message_listener($payment_failure_message)
