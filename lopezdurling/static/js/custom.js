@@ -321,9 +321,14 @@ $(document).ready(function () {
   $payment_button.click(function(e){
 
     // Shows the corresponding alert message
-    var message_listener = function($alert_box, msg){
+    var message_listener = function($alert_box, text){
       $payment_button.show()
       $alert_box.show();
+      if (text){
+        $alert_box.find(".feedback").text(text)
+      } else {
+        $alert_box.find(".feedback").text('')
+      }
     }
 
     $payment_success_message.hide()
@@ -344,14 +349,15 @@ $(document).ready(function () {
 
     // Must accept terms of service
     if(!document.getElementById("checkbox_accept_tos").checked){
-      alert("Debe aceptar los Términos del Servicio")
-      message_listener($payment_failure_message)
+      var text = "Debe aceptar los Términos del Servicio"
+      alert(text)
+      message_listener($payment_failure_message, text)
       return
     }
 
     // Fast fail if it has no "proforma" value
     if(!$("#proforma").val()){
-      message_listener($payment_failure_message)
+      message_listener($payment_failure_message, "Por favor escriba un número de proforma")
       return
     }
 
@@ -370,13 +376,15 @@ $(document).ready(function () {
       .done(function(msg){
         // If the message has no ballot number, then it failed
         if (msg.ballot && msg.response_code == "00"){
-          message_listener($payment_success_message, msg)
+          message_listener($payment_success_message, msg.response_message)
         } else {
-          message_listener($payment_failure_message, msg)
+          message_listener($payment_failure_message,
+            '. Codigo: ' + msg.response_code + ". " + msg.response_message
+          )
         }
       })
       .fail(function(msg){
-        message_listener($payment_failure_message, msg)
+        message_listener($payment_failure_message, msg.response_message)
       })
   })
 
