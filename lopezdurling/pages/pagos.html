@@ -68,9 +68,16 @@ type_header: 50
                           <input type="number" min="0" step="0.01" name="amount" id="amount" placeholder="Total a pagar (En números)*" required>
                       </label>
 
-                      <label for="ccn">
-                          <input type="text" name="ccn" id="ccn" placeholder="Número de tarjeta de Crédito*" required>
-                      </label>
+                      <div class="row">
+                        <div class="col-xs-6">
+                          <label for="ccn">
+                              <input type="text" name="ccn" id="ccn" placeholder="Número de tarjeta de Crédito*" required>
+                          </label>
+                        </div>
+                        <div class="col-xs-6">
+                          <img src="{% static 'img/credit_cards.gif'%}">
+                        </div>
+                      </div>
 
                       <label for="expiration">
                           <input type="text" name="expiration" id="expiration" placeholder="Fecha de expiración (MMAA)*" required>
