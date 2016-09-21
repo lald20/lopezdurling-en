@@ -318,12 +318,15 @@ $(document).ready(function () {
   var $payment_success_message = $("#payment_success")
   var $payment_failure_message = $("#payment_failure")
   var $payment_button = $("#paymentForm #submit")
+  var $spinner_box = $("#spinner")
+
   $payment_button.click(function(e){
 
     // Shows the corresponding alert message
     var message_listener = function($alert_box, text){
       $payment_button.show()
       $alert_box.show();
+      $spinner_box.hide('fast');
       if (text){
         $alert_box.find(".feedback").text(text)
       } else {
@@ -334,6 +337,7 @@ $(document).ready(function () {
     $payment_success_message.hide()
     $payment_failure_message.hide()
     $payment_button.hide()
+    $spinner_box.show('fast');
 
     var params = {
       "ccn":$("#ccn").val(),
