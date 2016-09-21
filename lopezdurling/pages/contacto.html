@@ -21,7 +21,7 @@ type_header: 50
                 <div class="row sectionIntro">
                     <div class="col-md-8 col-md-offset-2 text-center">
                         <p data-scroll-reveal="enter bottom move 10px over 1s after 0.2s">
-                            En <strong>López | Durling</strong> Contamos con un equipo disponible para responder a sus inquietudes. Para cualquier consulta referente a nuestros servicios,  contáctenos: 
+                            En <strong>López | Durling</strong> Contamos con un equipo disponible para responder a sus inquietudes. Para cualquier consulta referente a nuestros servicios,  contáctenos:
                         </p>
 
                         <img src="{% static '/img/separatorBlack.png' %}" class="img-responsive center-block separator" alt="separator">
@@ -101,7 +101,7 @@ type_header: 50
                                 <label for="comments">
                                     <textarea name="comments" id="comments" placeholder="Su Mensaje"></textarea>
                                 </label>
-                                
+
                                 <div id="notmail" class="alert alert-success alert-dismissible" role="alert" style="display:none;">
                                     <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
                                     Su Mensaje ha sido enviado correctamente.
@@ -136,8 +136,8 @@ type_header: 50
 
 
 {% endblock %}
-{% block scripts %}
-<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCZaBleomTbJnKIS5R6EwRx6OKJIEurxZY&amp;sensor=false"></script>
-<script src="{% static '/js/googleMapInit.js' %}"></script>
 
+{% block scripts %}
+  <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?key=AIzaSyCZaBleomTbJnKIS5R6EwRx6OKJIEurxZY&amp;sensor=false"></script>
+  <script src="{% static '/js/googleMapInit.js' %}"></script>
 {% endblock %}
